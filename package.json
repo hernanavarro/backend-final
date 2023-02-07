@@ -9,7 +9,8 @@
   "author": "hernanavarro",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "redis": "^4.6.4"
   },
   "devDependencies": {
     "jest": "^29.4.1"
