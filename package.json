@@ -1,0 +1,17 @@
+{
+  "name": "backend-final",
+  "version": "1.0.0",
+  "description": "Final work of the subject Ingenieria en Software 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "hernanavarro",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.4.1"
+  }
+}
