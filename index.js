@@ -1,10 +1,16 @@
 const express = require('express');
+const dotenv = require('dotenv');
 const redis = require('redis');
 const app = express();
 const port = 3000;
-const redisClient = redis.createClient(6379);
-
 const { add, sub, reset } = require("./services/operators");
+
+dotenv.config();
+
+console.log(process.env.REDIS_URL)
+const redisClient = redis.createClient({
+  url: process.env.REDIS_URL,
+});
 
 // redis init
 (async () => {
