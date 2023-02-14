@@ -3,4 +3,8 @@
 
 `node index.js`
 
-Para Iniciar el Backend
+Para Iniciar la API el Backend
+
+## Redis
+
+Para levantar redis localmente utilizo `redis-server`. 
