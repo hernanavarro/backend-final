@@ -4,6 +4,7 @@
   "description": "Final work of the subject Ingenieria en Software 3",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "jest"
   },
   "author": "hernanavarro",
