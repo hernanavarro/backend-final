@@ -3,8 +3,7 @@ const dotenv = require('dotenv');
 const redis = require('redis');
 const app = express();
 const port = 3000;
-//const { add, sub, reset } = require("./services/operators");
-const add = require("./services/add");
+const { add, sub, reset } = require("./services/operators");
 
 dotenv.config();
 
@@ -31,15 +30,6 @@ redisClient.on("error", (err) => {
 app.use(express.json());
 
 let count = 0;
-
-function reset () {
-    count = 0;
-    return count;
-};
-
-function sub (count, valor) {
-    return parseFloat(count)-parseFloat(valor);
-};
 
 app.get('/add/:a', async (req, res) => {
     let count = await redisClient.get("count");
