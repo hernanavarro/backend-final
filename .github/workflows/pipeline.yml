@@ -1,11 +1,28 @@
-name: CI
+name: CI/BE
 on:
   workflow_dispatch:
   push:
     branches: [main]
     
 jobs:
-  build-docker-image:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node 19
+        uses: actions/setup-node@v1
+        with:
+          node-version: 19.x
+
+      - name: Install packages
+        run: npm ci --include=dev
+
+      - name: Run tests
+        run: npm run test
+
+  build-push-docker:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -27,7 +44,7 @@ jobs:
           push: true
           tags: hernannavarro/backend-final:latest
 
-  deploy-to-railway:
+  deploy-railway:
     runs-on: ubuntu-latest
     needs: build-docker-image
     steps:
