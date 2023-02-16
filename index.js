@@ -2,7 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const redis = require('redis');
 const app = express();
-const port = 3000;
+const port = 5050;
 const { add, sub, reset } = require("./services/operators");
 
 dotenv.config();
