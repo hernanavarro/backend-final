@@ -1,6 +1,8 @@
 const express = require('express');
+var cors = require('cors');
 const dotenv = require('dotenv');
 const redis = require('redis');
+
 const app = express();
 const port = 5050;
 const { add, sub, reset } = require("./services/operators");
@@ -28,6 +30,13 @@ redisClient.on("error", (err) => {
 // redis end
 
 app.use(express.json());
+
+var corsOptions = {
+  origin: "https://frontend-final-production.up.railway.app"
+};
+
+app.use(cors(corsOptions));
+
 
 let count = 0;
 
