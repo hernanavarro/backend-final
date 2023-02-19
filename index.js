@@ -32,7 +32,7 @@ redisClient.on("error", (err) => {
 app.use(express.json());
 
 var corsOptions = {
-  origin: "https://frontend-final-production.up.railway.app"
+  origin: '*'
 };
 
 app.use(cors(corsOptions));
