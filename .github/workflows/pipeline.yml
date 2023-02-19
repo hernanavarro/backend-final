@@ -86,4 +86,4 @@ jobs:
 
       - name: Run Integration Test
         working-directory: ./integracion-final
-        run: npx codeceptjs run --steps
+        run: npm run codeceptjs
