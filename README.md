@@ -8,3 +8,10 @@ Para Iniciar la API el Backend
 ## Redis
 
 Para levantar redis localmente utilizo `redis-server`. 
+
+## Actions
+
+- Unit test
+- Build and push docker
+- Deploy in railway
+- Integrations test
