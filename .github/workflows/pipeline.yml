@@ -1,4 +1,4 @@
-name: CI/BE
+name: ci/cd - BE
 on:
   workflow_dispatch:
   push:
@@ -84,6 +84,6 @@ jobs:
         working-directory: ./integracion-final
         run: npm ci
 
-      - name: Run Integration Test
+      - name: Run integration test with report
         working-directory: ./integracion-final
-        run: TESTOMATIO=${{secrets.TESTTOMAT_API_KEY}} npx codeceptjs run
+        run: TESTOMATIO=${{secrets.TESTOMATIO_API_KEY}} npx codeceptjs run
