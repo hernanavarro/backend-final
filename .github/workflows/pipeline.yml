@@ -86,4 +86,4 @@ jobs:
 
       - name: Run integration test with report
         working-directory: ./integracion-final
-        run: TESTOMATIO=${{secrets.TESTOMATIO_API_KEY}} npx codeceptjs run
+        run: TESTOMATIO=${{secrets.TESTTOMAT_API_KEY}} npx codeceptjs run
